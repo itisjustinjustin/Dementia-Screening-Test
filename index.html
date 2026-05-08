@@ -74,7 +74,7 @@ Known Issues:
 	
     	<div id="content" class="w3-container">
         <p>
-		<p>Take a moment to memorize the following three words. You will be asked to recall them at the end of this test.</p>
+		<p>Take a moment to memorize the following three words. You will be asked to recall them, in order, at the end of this test.</p>
 		<br><br>
 		<p>Shell</p>
 		<p>Cloth</p>
@@ -185,9 +185,9 @@ Known Issues:
 	
 	<div id="content" class="w3-container">
 	<p>How many quarters make $5.75?</p> 
-    <input type="text" name="math" placeholder="Enter number">
-    <a href="#four" class="w3-btn w3-blue w3-round"> Next </a>
+    <input type="text" name="math" placeholder="Enter number"> <!--makes textbook for user to put answer-->
 	<br><br>
+    <a href="#four" class="w3-btn w3-blue w3-round"> Next </a> <!--takes user to next page-->
 	</div>
 </div>	
 
@@ -200,7 +200,7 @@ Known Issues:
 	<img src="https://www.marathonwatch.com/cdn/shop/products/CL034002-BK-00-NA-IMG7-Alternate-Front.jpg?v=1669737532"
         alt="Clock Image"
         style="width: 25vw; height: auto; display: block;"
-		>
+		> <!--puts an image of a clock-->
 	<p>What time does the clock above show?</p> 
 	
 	<label for="hour">Hour:</label> <!--makes a dropdown menu for the hour-->
@@ -222,7 +222,7 @@ Known Issues:
 
 	<label for="minute">Minute:</label>
 
-	<select name="minute" id="minute">
+	<select name="minute" id="minute"> <!--makes a dropdown menu for the minute-->
 	<option value="00">00</option>
 	<option value="05">05</option>
 	<option value="10">10</option>
@@ -243,35 +243,46 @@ Known Issues:
 </div>
 
 <div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
-		<h1>How many eyes does it have?</h1>
+	<div class="w3-container w3-blue">
+		<h1>Question 5</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p></p> 
-    <a href="#brown-recluse" class="w3-btn w3-grey w3-round"> 6 </a>
-    <p></p>
-    <a href="#movements" class="w3-btn w3-grey w3-round"> 8 </a>
+	<p>Write the names of the following objects in the textboxes. For instance, if a hat is show, write "hat."</p> 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
+        alt="Apple Image"
+        style="width: 25vw; height: auto; display: block;"
+		> <!--puts an image of an apple-->
+	<input type="text" name="picture-one" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
+	<br><br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQacTjvZ39hPBULTx5D5dIUVE8ufhJhkRs1-A&s"
+        alt="Shoe Image"
+        style="width: 25vw; height: auto; display: block;"
+		> <!--puts an image of a shoe-->
+	<input type="text" name="picture-two" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
+    <a href="#six" class="w3-btn w3-blue w3-round">Next</a>
+	</div>
+</div>
+
+<div class="page" id="six">
+	<div class="w3-container w3-blue">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Please enter the three words you were given at the start of the test in order.</p> 
+    <input type="text" name="shell" placeholder="Word 1">
+	<input type="text" name="cloth" placeholder="Word 2">
+	<input type="text" name="board" placeholder="Word 3">
+	<br><br>
+	<p>You have now completed the screening test. Click the button below to see your results.</p>
+    <a href="#seven" class="w3-btn w3-blue w3-round">Results</a>
 	<br><br>
 	</div>
 </div>
 
-<div class="page" id="movements">
-	<div class="w3-container w3-flat-carrot">
-		<h1>What type of movements does it make?</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <a href="#jumping-spider" class="w3-btn w3-grey w3-round"> Jumps rather than runs. </a>
-    <p></p>
-    <a href="#wolf-spider" class="w3-btn w3-grey w3-round"> Fast-moving on the ground. </a>
-	<br><br>
-	</div>
-</div>
-
-<div class="page" id="cellar-spider">
-	<div class="w3-container w3-flat-carrot">
+<div class="page" id="seven">
+	<div class="w3-container w3-blue">
 		<h1>Your answers best describe a</h1>
 	</div>
 	
@@ -283,116 +294,6 @@ Known Issues:
         style="width: 100vw; height: auto; display: block;"
 	>	
   	<br><br>
-	</div>
-</div>	
-<div class="page" id="black-widow">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>BLACK WIDOW</H2>
-    <img src="images/black_widow.png"
-        alt="Black Widow Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>
-	<br><br>
-	</div>
-</div>
-
-	<div class="page" id="orb-weaver">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>ORB WEAVER</H2>
-    <img src="images/orb_weaver.png"
-        alt="Orb Weaver Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>	
-  	<br><br>
-	</div>
-</div>	
-<div class="page" id="house-spider">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>AMERICAN HOUSE SPIDER</H2>
-    <img src="images/american_house_spider.png"
-        alt="American House Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>
-	<br><br>
-	</div>
-</div>	
-
-<div class="page" id="yellow-spider">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>YELLOW SAC SPIDER</H2>
-    <img src="images/yellow_sac_spider.png"
-        alt="Yellow Sac Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>
-	<br><br>
-	</div>
-</div>	
-
-<div class="page" id="brown-recluse">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>BROWN RECLUSE SPIDER</H2>
-    <img src="images/brown_recluse.png"
-        alt="Brown Recluse Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>
-	<br><br>
-	</div>
-</div>	
-
-<div class="page" id="jumping-spider">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>JUMPING SPIDER</H2>
-    <img src="images/jumping_spider.png"
-        alt="Jumping Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>
-	<br><br>
-	</div>
-</div>	
-
-<div class="page" id="wolf-spider">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Your answers best describe a</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>WOLF SPIDER</H2>
-    <img src="images/wolf_spider.png"
-        alt="Wolf Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>
-	<br><br>
 	</div>
 </div>	
 
