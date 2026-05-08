@@ -143,7 +143,13 @@ Known Issues:
 		document.getElementById("resultsButton").style.display = "none"; /*makes results button disappear when it's clicked*/
 
 		var resultsText = document.getElementById("resultsLocation"); 
-		resultsLocation.innerHTML = totalscore
+		if (totalscore >= 70) {
+			resultsLocation.innerHTML = "You show little to no indication of demensia-like symptoms. Please remember that this is not a professional diagnosis."
+		} else if (totalscore < 70 && totalscore >=30) {
+			resultsLocation.innerHTML = "You show a moderate level of indication of demensia-like symptoms. Please remember that this is not a professional diagnosis."
+		} else {
+			resultsLocation.innerHTML = "You show high indication of demensia-like symptoms. Please remember that this is not a professional diagnosis."
+		}
 	}
 
 </script>
