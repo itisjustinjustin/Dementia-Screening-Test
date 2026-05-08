@@ -69,6 +69,7 @@ Known Issues:
 			totalscore += 10;
 		} 
 	}
+	/*adds score for correctly calculating number of quarters*/
 
 	function appleScore() {
 		let text = document.getElementById("apple").value;
@@ -78,6 +79,7 @@ Known Issues:
 			totalscore += 5;
 		} 
 	}
+	/*adds score for correctly identifying object as apple*/
 
 	function shoeScore() {
 		let text = document.getElementById("shoe").value;
@@ -87,6 +89,43 @@ Known Issues:
 			totalscore += 5;
 		} 
 	}
+	/*adds score for correctly identifying object as shoe*/
+	
+	function monthScore() {
+		let selectedMonth = document.getElementById("month").value;
+
+		if (selectedMonth === "May") {
+			totalscore += 10;
+		} 
+	}
+	/*adds score for correctly identifying object as shoe*/
+
+	function yearScore() {
+		let selectedYear = document.getElementById("year").value;
+
+		if (selectedYear === "2026") {
+			totalscore += 10;
+		} 
+	}
+	/*adds score for correctly identifying object as shoe*/
+
+	function hourScore() {
+		let selectedHour = document.getElementById("hour").value;
+
+		if (selectedHour === "10") {
+			totalscore += 5;
+		} 
+	}
+	/*adds score for correctly identifying object as shoe*/
+
+	function minuteScore() {
+		let selectedMinute = document.getElementById("minute").value;
+
+		if (selectedMinute === "10") {
+			totalscore += 5;
+		} 
+	}
+	/*adds score for correctly identifying object as shoe*/
 	
 	function calculateTotal() {
 
@@ -96,6 +135,10 @@ Known Issues:
 		coinScore();
 		appleScore();
 		shoeScore();
+		monthScore();
+		yearScore();
+		hourScore();
+		minuteScore();
 
 		document.getElementById("resultsButton").style.display = "none"; /*makes results button disappear when it's clicked*/
 
@@ -184,9 +227,13 @@ Known Issues:
 	<option value="December">December</option>
 	</select>
 
-	<label for="month">Year:</label> <!--creates a dropdown menu of years-->
+	<label for="year">Year:</label> <!--creates a dropdown menu of years-->
 
-	<select name="month" id="month">
+	<select name="year" id="year">
+	<option value="2026">2030</option>
+	<option value="2026">2029</option>
+	<option value="2026">2028</option>
+	<option value="2026">2027</option>
 	<option value="2026">2026</option>
 	<option value="2025">2025</option>
 	<option value="2024">2024</option>
@@ -321,7 +368,7 @@ Known Issues:
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Write the names of the following objects in the textboxes. For instance, if a hat is show, write "hat."</p> 
+	<p>Write the names of the following objects in the textboxes. For instance, if a hat is shown, write "hat."</p> 
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
         alt="Apple Image"
         style="width: 25vw; height: auto; display: block;"
