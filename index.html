@@ -28,7 +28,47 @@ Known Issues:
 
 
 <script>
-        /* This is where any required JavaScript should go. */
+
+	let totalscore = 0;
+
+	function shellScore() {
+		let text = document.getElementById("shell").value;
+		text = text.toLowerCase();
+
+		if (text === "shell") {
+			totalscore += 50/3;
+		} 
+	}
+	
+	function clothScore() {
+		let text = document.getElementById("cloth").value;
+		text = text.toLowerCase();
+
+		if (text === "cloth") {
+			totalscore += 50/3;
+		} 
+	}
+
+	function boardScore() {
+		let text = document.getElementById("board").value;
+		text = text.toLowerCase();
+
+		if (text === "board") {
+			totalscore += 50/3;
+		} 
+	}
+
+	function calculateTotal() {
+
+		shellScore();
+		clothScore();
+		boardScore();
+
+		document.getElementById("resultsButton").style.display = "none";
+
+		var resultsText = document.getElementById("resultsLocation");
+		resultsLocation.innerHTML = totalscore
+	}
 
 </script>
 
@@ -253,14 +293,15 @@ Known Issues:
         alt="Apple Image"
         style="width: 25vw; height: auto; display: block;"
 		> <!--puts an image of an apple-->
-	<input type="text" name="picture-one" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
+	<input type="text" id="picture-one" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
 	<br><br>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQacTjvZ39hPBULTx5D5dIUVE8ufhJhkRs1-A&s"
         alt="Shoe Image"
         style="width: 25vw; height: auto; display: block;"
 		> <!--puts an image of a shoe-->
-	<input type="text" name="picture-two" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
-    <a href="#six" class="w3-btn w3-blue w3-round">Next</a>
+	<input type="text" id="picture-two" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
+    <br><br>
+	<a href="#six" class="w3-btn w3-blue w3-round">Next</a>
 	</div>
 </div>
 
@@ -271,28 +312,25 @@ Known Issues:
 	
 	<div id="content" class="w3-container">
 	<p>Please enter the three words you were given at the start of the test in order.</p> 
-    <input type="text" name="shell" placeholder="Word 1"> <!--makes textbox for first word-->
-	<input type="text" name="cloth" placeholder="Word 2"> <!--makes textbox for second word-->
-	<input type="text" name="board" placeholder="Word 3"> <!--makes textbox for third word-->
+    <input type="text" id="shell" placeholder="Word 1"> <!--makes textbox for first word-->
 	<br><br>
-	<p>You have now completed the screening test. Click the button below to see your results.</p>
-    <a href="#seven" class="w3-btn w3-blue w3-round">Results</a>
+	<input type="text" id="cloth" placeholder="Word 2"> <!--makes textbox for second word-->
+	<br><br>
+	<input type="text" id="board" placeholder="Word 3"> <!--makes textbox for third word-->
+	<br><br>
+    <a href="#seven" class="w3-btn w3-blue w3-round">Next</a>
 	<br><br>
 	</div>
 </div>
 
 <div class="page" id="seven">
 	<div class="w3-container w3-blue">
-		<h1>Your answers best describe a</h1>
+		<h1>Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p></p> 
-    <H2>CELLAR SPIDER</H2>
-    <img src="images/cellar_spider.png"
-        alt="Cellar Spider Image"
-        style="width: 100vw; height: auto; display: block;"
-	>	
+	<p id = "resultsLocation"> You have  completed the screening test. Click the button below to see your results.</p>
+    <a id = "resultsButton" href="#seven" onclick = "calculateTotal();" class="w3-btn w3-blue w3-round">Results</a>
   	<br><br>
 	</div>
 </div>	
