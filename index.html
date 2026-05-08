@@ -39,7 +39,8 @@ Known Issues:
 			totalscore += 50/3;
 		} 
 	}
-	
+	/*adds score for remembering the word "shell"*/
+
 	function clothScore() {
 		let text = document.getElementById("cloth").value;
 		text = text.toLowerCase();
@@ -48,6 +49,7 @@ Known Issues:
 			totalscore += 50/3;
 		} 
 	}
+	/*adds score for remembering the word "cloth"*/
 
 	function boardScore() {
 		let text = document.getElementById("board").value;
@@ -57,16 +59,47 @@ Known Issues:
 			totalscore += 50/3;
 		} 
 	}
+	/*adds score for remembering the word "board"*/
 
+	function coinScore() {
+		let text = document.getElementById("coin").value;
+		text = text.toLowerCase();
+
+		if (text === "23") {
+			totalscore += 10;
+		} 
+	}
+
+	function appleScore() {
+		let text = document.getElementById("apple").value;
+		text = text.toLowerCase();
+
+		if (text === "apple") {
+			totalscore += 5;
+		} 
+	}
+
+	function shoeScore() {
+		let text = document.getElementById("shoe").value;
+		text = text.toLowerCase();
+
+		if (text === "shoe") {
+			totalscore += 5;
+		} 
+	}
+	
 	function calculateTotal() {
 
 		shellScore();
 		clothScore();
 		boardScore();
+		coinScore();
+		appleScore();
+		shoeScore();
 
-		document.getElementById("resultsButton").style.display = "none";
+		document.getElementById("resultsButton").style.display = "none"; /*makes results button disappear when it's clicked*/
 
-		var resultsText = document.getElementById("resultsLocation");
+		var resultsText = document.getElementById("resultsLocation"); 
 		resultsLocation.innerHTML = totalscore
 	}
 
@@ -225,7 +258,7 @@ Known Issues:
 	
 	<div id="content" class="w3-container">
 	<p>How many quarters make $5.75?</p> 
-    <input type="text" name="math" placeholder="Enter number"> <!--makes textbook for user to put answer-->
+    <input type="text" id="coin" placeholder="Enter number"> <!--makes textbook for user to put answer-->
 	<br><br>
     <a href="#four" class="w3-btn w3-blue w3-round"> Next </a> <!--takes user to next page-->
 	</div>
@@ -293,13 +326,13 @@ Known Issues:
         alt="Apple Image"
         style="width: 25vw; height: auto; display: block;"
 		> <!--puts an image of an apple-->
-	<input type="text" id="picture-one" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
+	<input type="text" id="apple" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
 	<br><br>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQacTjvZ39hPBULTx5D5dIUVE8ufhJhkRs1-A&s"
         alt="Shoe Image"
         style="width: 25vw; height: auto; display: block;"
 		> <!--puts an image of a shoe-->
-	<input type="text" id="picture-two" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
+	<input type="text" id="shoe" placeholder="Enter object name"> <!--makes textbox for user to put answer-->
     <br><br>
 	<a href="#six" class="w3-btn w3-blue w3-round">Next</a>
 	</div>
