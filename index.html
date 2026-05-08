@@ -33,10 +33,10 @@ Known Issues:
 
 	function shellScore() {
 		let text = document.getElementById("shell").value;
-		text = text.toLowerCase();
+		text = text.toLowerCase(); /*makes it not case-sensitive*/
 
 		if (text === "shell") {
-			totalscore += 50/3;
+			totalscore += 50/3; /*conditionally adds a third of the 50 points to the total score if the word was correct*/
 		} 
 	}
 	/*adds score for remembering the word "shell"*/
@@ -65,7 +65,7 @@ Known Issues:
 		let text = document.getElementById("coin").value;
 		text = text.toLowerCase();
 
-		if (text === "23") {
+		if (text === "23") { 
 			totalscore += 10;
 		} 
 	}
@@ -92,10 +92,10 @@ Known Issues:
 	/*adds score for correctly identifying object as shoe*/
 	
 	function monthScore() {
-		let selectedMonth = document.getElementById("month").value;
+		let selectedMonth = document.getElementById("month").value; /*sets variable equal to chosen dropdown value*/
 
 		if (selectedMonth === "May") {
-			totalscore += 10;
+			totalscore += 10; /*conditionally adds score if dropdown value was correct*/
 		} 
 	}
 	/*adds score for correctly identifying object as shoe*/
@@ -139,6 +139,7 @@ Known Issues:
 		yearScore();
 		hourScore();
 		minuteScore();
+		/*adds together all the scores*/
 
 		document.getElementById("resultsButton").style.display = "none"; /*makes results button disappear when it's clicked*/
 
@@ -150,6 +151,7 @@ Known Issues:
 		} else {
 			resultsLocation.innerHTML = "You show high indication of demensia-like symptoms. Please remember that this is not a professional diagnosis."
 		}
+		/*gives a diagnosis based on what range the total score is in*/
 	}
 
 </script>
@@ -201,7 +203,7 @@ Known Issues:
 		<p>Shell</p>
 		<p>Cloth</p>
 		<p>Board</p>
-		<br><br>
+		<br><br> <!--page break-->
 		<p>Once you believe you have these words memorized, click the button below to move on to to the next quesiton.</p>
             <a href="#two" class="w3-btn w3-blue w3-round"> Next </a> <!--takes user to the next page-->
         </p>
@@ -311,7 +313,7 @@ Known Issues:
 	
 	<div id="content" class="w3-container">
 	<p>How many quarters make $5.75?</p> 
-    <input type="text" id="coin" placeholder="Enter number"> <!--makes textbook for user to put answer-->
+    <input type="text" id="coin" placeholder="Enter number"> <!--makes textbox for user to put answer-->
 	<br><br>
     <a href="#four" class="w3-btn w3-blue w3-round"> Next </a> <!--takes user to next page-->
 	</div>
@@ -416,7 +418,7 @@ Known Issues:
 	
 	<div id="content" class="w3-container">
 	<p id = "resultsLocation"> You have  completed the screening test. Click the button below to see your results.</p>
-    <a id = "resultsButton" href="#seven" onclick = "calculateTotal();" class="w3-btn w3-blue w3-round">Results</a>
+    <a id = "resultsButton" href="#seven" onclick = "calculateTotal();" class="w3-btn w3-blue w3-round">Results</a> <!--makes results appear when button is pressed-->
   	<br><br>
 	</div>
 </div>	
